@@ -1,0 +1,462 @@
+/* Color variables */
+:root {
+    --white-color: #fff;
+    --bg-color: #f9f9f9;
+    --gray-color: #ccc;
+    --primary-color: #007BFF;
+    --secondary-color: #6c757d;
+}
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: var(--bg-color);
+    color: #333;
+}
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+a:hover {
+    text-decoration: underline;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+/* Background image */
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/reg.jpg'); /* Замените на путь к вашему фоновому изображению */
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    filter: blur(5px); /* Добавляем размытие фона */
+}
+
+/* Container styles */
+.container {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9); /* Полупрозрачный белый фон */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.container:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+/* Registration title */
+.register-title {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+    font-size: 2rem;
+}
+
+/* Form styles */
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.form-label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+.form-input {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid var(--gray-color);
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Button styles */
+.btn-primary {
+    padding: 10px 20px;
+    background: var(--primary-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+.btn-primary:hover {
+    background: darken(var(--primary-color), 10%);
+    transform: scale(1.05);
+}
+
+/* Link to login */
+.login-link {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+/* Error and success messages */
+.error {
+    color: red;
+    margin-top: 10px;
+    font-weight: bold;
+}
+.success {
+    color: green;
+    margin-top: 10px;
+    font-weight: bold;
+}
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--primary-color);
+    padding: 10px 20px;
+}
+.navbar .logo h1 {
+    color: var(--white-color);
+    margin: 0;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+.nav-links li {
+    margin-left: 20px;
+}
+.nav-links a {
+    color: var(--white-color);
+    font-weight: bold;
+}
+.nav-links a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+/* Hero section (Главная страница) */
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background: url("images/home-bg.jpg") no-repeat center/cover;
+    color: var(--white-color);
+}
+.hero h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+.hero p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Topics section (Главная страница) */
+#topics {
+    padding: 50px 20px;
+    background: var(--bg-color);
+}
+#topics h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+#topics ul {
+    list-style: none;
+    padding: 0;
+}
+#topics li {
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+/* Profile page styles */
+.profile-page {
+    padding: 50px 20px;
+    background: var(--bg-color);
+}
+.profile-page h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+    font-size: 2.5rem;
+}
+.profile-page h2 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: var(--secondary-color);
+}
+/* Topics page (Страница списка тем) */
+.topics-page {
+    padding: 50px 20px;
+    background: var(--bg-color);
+}
+.topics-page h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+    font-size: 2rem;
+}
+.topics-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+.topic-card {
+    background: var(--white-color);
+    border: 1px solid var(--gray-color);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.topic-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+.topic-card a {
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+    display: block;
+}
+.topic-card a:hover {
+    color: darken(var(--primary-color), 10%);
+    text-decoration: underline;
+}
+/* Topic page (Страница конкретной темы) */
+.topic-page {
+    padding: 50px 20px;
+    background: var(--bg-color);
+}
+.topic-page h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+    font-size: 2.5rem;
+}
+.topic-page .content {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    text-align: justify;
+}
+.topic-page .content strong {
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+.topic-page .content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+.topic-page .content li {
+    margin-bottom: 10px;
+}
+.topic-page .content p {
+    margin-bottom: 20px;
+}
+.topic-page .actions {
+    text-align: center;
+    margin-top: 30px;
+}
+.topic-page .btn {
+    padding: 10px 20px;
+    background: var(--primary-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+.topic-page .btn:hover {
+    background: darken(var(--primary-color), 10%);
+    transform: scale(1.05);
+}
+/* Test page (Страница теста) */
+.test-page {
+    padding: 50px 20px;
+    background: var(--bg-color);
+}
+.test-page h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.test-page .question {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+.test-page label {
+    display: block;
+    margin-bottom: 5px;
+}
+.test-page input[type="radio"] {
+    margin-right: 10px;
+}
+.test-page button {
+    padding: 10px 20px;
+    background: var(--primary-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.test-page button:hover {
+    background: darken(var(--primary-color), 10%);
+}
+/* Footer styles */
+footer {
+    background: var(--primary-color);
+    color: var(--white-color);
+    text-align: center;
+    padding: 20px 0;
+}
+/* Container styles */
+.container {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9); /* Полупрозрачный белый фон */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center; /* Центрируем содержимое */
+}
+.container:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+/* Login title */
+.login-title {
+    margin-bottom: 30px;
+    color: var(--primary-color);
+    font-size: 2rem;
+}
+
+/* Image styles */
+.login-image {
+    display: block;
+    margin: 0 auto; /* Центрируем изображение */
+    max-width: 100%; /* Адаптивное масштабирование */
+    height: auto; /* Сохраняем пропорции */
+    margin-bottom: 20px; /* Отступ под изображением */
+    border-radius: 5px; /* Закругляем углы изображения */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Добавляем тень */
+}
+
+/* Form styles */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.form-label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+.form-input {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid var(--gray-color);
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Button styles */
+.btn-primary {
+    padding: 10px 20px;
+    background: var(--primary-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+.btn-primary:hover {
+    background: darken(var(--primary-color), 10%);
+    transform: scale(1.05);
+}
+
+/* Link to registration */
+.register-link {
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+/* Error and success messages */
+.error {
+    color: red;
+    margin-top: 10px;
+    font-weight: bold;
+}
+.success {
+    color: green;
+    margin-top: 10px;
+    font-weight: bold;
+}
+/* Container styles */
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: var(--white-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.container:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+/* Question block */
+.question-block {
+    margin-bottom: 20px;
+}
+.question-block h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+
+/* Radio buttons */
+.form-radio {
+    margin-bottom: 10px;
+}
+.form-radio label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1rem;
+    color: var(--secondary-color);
+}
+.form-radio input[type="radio"] {
+    margin-right: 10px;
+}
+
+/* Submit button */
+.btn-primary {
+    padding: 10px 20px;
+    background: var(--primary-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+.btn-primary:hover {
+    background: darken(var(--primary-color), 10%);
+    transform: scale(1.05);
+}
